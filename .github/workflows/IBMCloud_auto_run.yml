@@ -21,6 +21,7 @@ jobs:
       env:
         IBM_ACCOUNT: ${{ secrets.IBM_ACCOUNT }}
         REGION_NUM: ${{ secrets.REGION_NUM }}
+        IBM_ACCOUNT_PWD: ${{ secrets.IBM_ACCOUNT_PWD }}
       run: |
         ./IBM_Cloud_CLI/ibmcloud login -u  $IBM_ACCOUNT -p $IBM_ACCOUNT_PWD -r $REGION_NUM -s dev -o  $IBM_ACCOUNT
     - name: Target IBM Cloud
